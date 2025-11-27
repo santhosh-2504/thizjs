@@ -4,18 +4,16 @@ import { themes as prismThemes } from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'THIZ.js',
-  tagline: 'A lightweight backend DX framework',
-  favicon: 'img/favicon.ico',
-
+  tagline: 'THIZ.js is a modern backend framework that brings file-based routing and convention-over-configuration principles to Express.js.',
   future: {
     v4: true,
   },
 
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://thizjs.vercel.app/',
   baseUrl: '/',
 
-  organizationName: 'santhosh-2504',
-  projectName: 'create-thiz-app',
+  organizationName: 'thizjs',
+  projectName: 'thizjs',
 
   onBrokenLinks: 'throw',
   i18n: {
@@ -29,7 +27,7 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
-          editUrl: 'https://github.com/santhosh-2504/create-thiz-app/tree/main/docs/',
+          editUrl: 'https://github.com/santhosh-2504/thizjs/tree/main/',
         },
         blog: false,   // 🔥 Hides blog entirely
         theme: {
