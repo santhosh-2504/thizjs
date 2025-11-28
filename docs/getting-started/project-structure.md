@@ -373,6 +373,5 @@ Don't let structure become messy. Reorganize as you grow.
 
 Now that you understand the structure:
 
-- File-Based Routing (see Core Concepts) - Learn routing conventions
-- Middleware System (see Core Concepts) - Understand middleware flow
-- Building Your First API (see Guides) - Create a complete CRUD API
+- [File-Based Routing](./../core-features/file-based-routing.md) - Learn routing conventions
+- [Middleware System](./../core-features/middlewares.md) - Understand middleware flow

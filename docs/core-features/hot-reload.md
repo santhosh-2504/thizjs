@@ -178,114 +178,6 @@ ReferenceError: db is not defined
 
 The watcher detects the crash and restarts automatically.
 
-## Configuration
-
-### Custom Watch Directory
-
-By default, `@thizjs/dev` watches the `src` directory. To watch a different directory, modify `package.json`:
-
-```json
-{
-  "scripts": {
-    "dev": "thiz-dev --watch app"
-  }
-}
-```
-
-Now it watches the `app` directory instead.
-
-### Multiple Watch Directories
-
-Watch multiple directories:
-
-```json
-{
-  "scripts": {
-    "dev": "thiz-dev --watch src,lib,config"
-  }
-}
-```
-
-Comma-separated, no spaces.
-
-### Custom Entry Point
-
-Change the server entry point:
-
-```json
-{
-  "scripts": {
-    "dev": "thiz-dev --entry src/index.js"
-  }
-}
-```
-
-### Programmatic Usage
-
-For advanced control, use the API directly:
-
-```javascript
-// dev-server.js
-import { createWatcher } from '@thizjs/dev';
-
-const watcher = createWatcher({
-  entry: 'src/server.js',
-  watch: 'src',
-  ignore: ['**/test/**', '**/*.test.js'],
-  debounce: 200,
-  verbose: true,
-  nodeArgs: ['--inspect'],
-  env: {
-    NODE_ENV: 'development',
-    DEBUG: 'app:*'
-  }
-});
-
-watcher.start();
-```
-
-Run it:
-```bash
-node dev-server.js
-```
-
-### Configuration Options
-
-| Option | Type | Default | Description |
-|--------|------|---------|-------------|
-| `entry` | string | `"src/server.js"` | Server entry file |
-| `watch` | string or array | `"src"` | Directories to watch |
-| `ignore` | array | `["**/node_modules/**", "**/.git/**"]` | Patterns to ignore |
-| `debounce` | number | `150` | Milliseconds to wait before restart |
-| `verbose` | boolean | `false` | Detailed logging |
-| `nodeArgs` | array | `[]` | Arguments for Node.js |
-| `env` | object | `{}` | Environment variables |
-
-## Debugging with Hot Reload
-
-Enable Node.js inspector:
-
-```json
-{
-  "scripts": {
-    "dev:debug": "thiz-dev --node-args='--inspect'"
-  }
-}
-```
-
-Run:
-```bash
-npm run dev:debug
-```
-
-Output:
-```
-Debugger listening on ws://127.0.0.1:9229/...
-[THIZ] Server started at http://localhost:5000
-```
-
-Open Chrome DevTools to debug. The debugger reconnects after each hot reload.
-
 ## Performance
 
 ### Fast Restarts
@@ -347,7 +239,7 @@ vim src/middlewares/checkAuth.js
 
 One restart handles both changes.
 
-**2. Use verbose mode for debugging**
+<!-- **2. Use verbose mode for debugging**
 
 When troubleshooting reload issues:
 
@@ -355,11 +247,11 @@ When troubleshooting reload issues:
 createWatcher({
   verbose: true
 });
-```
+``` -->
 
 Shows detailed information about file changes and restarts.
 
-**3. Keep server startup fast**
+**2. Keep server startup fast**
 
 Slow startup = slow hot reload. Avoid:
 - Heavy database seeding on startup
@@ -368,7 +260,7 @@ Slow startup = slow hot reload. Avoid:
 
 Do initialization lazily or move it elsewhere.
 
-**4. Watch only what you need**
+<!-- **4. Watch only what you need**
 
 Don't watch directories with frequent changes:
 
@@ -379,7 +271,7 @@ createWatcher({
 });
 ```
 
-Reduces unnecessary restarts.
+Reduces unnecessary restarts. -->
 
 ## Troubleshooting
 
@@ -403,7 +295,7 @@ Ctrl+C
 npm run dev
 ```
 
-### Too Many Restarts
+<!-- ### Too Many Restarts
 
 **Likely cause:** File watcher detecting unwanted changes
 
@@ -418,7 +310,7 @@ createWatcher({
     '**/uploads/**'
   ]
 });
-```
+``` -->
 
 ### Slow Restarts
 

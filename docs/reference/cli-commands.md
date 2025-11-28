@@ -105,7 +105,7 @@ npx thiz-dev
 - Ignore patterns: `**/node_modules/**`, `**/.git/**`
 - Debounce: 150ms
 
-### Programmatic API
+<!-- ### Programmatic API
 
 For advanced use cases, import and configure the watcher directly:
 
@@ -127,9 +127,9 @@ watcher.start();
 // Manual control
 watcher.restart();
 await watcher.stop();
-```
+``` -->
 
-### Examples
+<!-- ### Examples
 
 **Watch multiple directories:**
 ```javascript
@@ -156,7 +156,7 @@ createWatcher({
 }).start();
 ```
 
----
+--- -->
 
 ## Common Workflows
 

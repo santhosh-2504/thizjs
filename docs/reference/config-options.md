@@ -104,7 +104,7 @@ src/
 
 ---
 
-## @thizjs/dev
+<!-- ## @thizjs/dev
 
 The development server. Configure it programmatically or use defaults.
 
@@ -242,7 +242,7 @@ watcher.restart(); // Manual restart
 await watcher.stop();
 ```
 
----
+--- -->
 
 ## Environment Variables
 
@@ -415,7 +415,7 @@ app.use('/legacy', legacyRoutes);
 await registerRoutes(app, 'new-routes', { prefix: '/v2' });
 ```
 
-### Custom Dev Server
+<!-- ### Custom Dev Server
 
 ```javascript
 import { createWatcher } from '@thizjs/dev';
@@ -429,7 +429,7 @@ createWatcher({
 }).start();
 ```
 
----
+--- -->
 
 ## Next Steps
 

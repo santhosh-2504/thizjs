@@ -196,18 +196,6 @@ The inspector is lightweight:
 
 ## Troubleshooting
 
-### Inspector Won't Start
-
-**Check port availability:**
-```bash
-lsof -i :3456
-```
-
-If occupied, use a different port:
-```bash
-npm run routes -- --port 4000
-```
-
 ### Routes Not Showing
 
 **Verify route directory:**
