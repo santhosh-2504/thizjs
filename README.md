@@ -1,6 +1,6 @@
 ## Repositories
 
-- Documentation — https://thizjs.vercel.app
+- Documentation — https://thizjs-docs.vercel.app
 - CLI — https://github.com/santhosh-2504/create-thiz-app
 - Runtime — https://github.com/santhosh-2504/thizjs-express
 - Dev Runtime — https://github.com/santhosh-2504/thizjs-dev

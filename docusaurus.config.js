@@ -9,11 +9,11 @@ const config = {
     v4: true,
   },
 
-  url: 'https://thizjs.vercel.app/',
+  url: 'https://thizjs-docs.vercel.app/',
   baseUrl: '/',
 
   organizationName: 'santhosh-2504',
-  projectName: 'thizjs',
+  projectName: 'thizjs-docs',
 
   onBrokenLinks: 'throw',
   i18n: {
